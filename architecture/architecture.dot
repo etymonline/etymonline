@@ -13,13 +13,14 @@ digraph etymonline {
   InternetUsers [label=<<TABLE BORDER="0" CELLBORDER="0"><TR><TD><IMG SRC="images/InternetUsers.png"/></TD></TR><TR><TD>Internet Users</TD></TR></TABLE>>]
   DougHarper [style=filled, fillcolor=black, fontcolor=white, label=<<TABLE BORDER="0" CELLBORDER="0"><TR><TD><IMG SRC="images/DougHarper.png"/></TD></TR><TR><TD>Doug Harper</TD></TR></TABLE>>]
 
-  SearchEngine -> Database
+  SearchEngine -> Database [color=purple]
 
-  Website -> SearchEngine
-  Website -> Database
-  API -> SearchEngine
-  API -> Database
-  AdminPanel -> Database
+  Website -> SearchEngine [color=purple]
+  Website -> Database [color=purple]
+  API -> SearchEngine [color=purple]
+  API -> Database [color=purple]
+  AdminPanel -> SearchEngine [color=purple]
+  AdminPanel -> Database [color=green]
 
   ReverseProxy -> Website [color=red]
   ReverseProxy -> API [color=blue]
